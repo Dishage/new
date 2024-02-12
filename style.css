@@ -1,51 +1,53 @@
 #game-container {
     text-align: center;
-    margin-top: 20px;
+    max-width: 100%; /* Ensure the container doesn't exceed the viewport width */
+    margin: auto; /* Center the container on the page */
+    padding: 10px; /* Optional padding for visual spacing from the viewport edges */
 }
 
 #grid {
     display: grid;
-    grid-template-columns: repeat(10, 1fr); /* 10x10 grid */
-    gap: 0px; /* Remove spaces between grid items */
-    margin-top: 20px;
+    grid-template-columns: repeat(10, 1fr); /* 10 columns */
+    gap: 0; /* No gap between grid items */
+    width: 100%; /* Grid width to fill the container */
+    max-width: 500px; /* Adjust this value based on your preference */
+    margin: 0 auto; /* Center the grid within its container */
 }
 
 .grid-item {
-    height: 50px; /* Square dimensions */
-    width: 50px; /* Square dimensions */
-    border: 1px solid #ffffff; /* Light border for subtle separation */
+    aspect-ratio: 1 / 1; /* Ensures items are always square */
+    border: 1px solid #ffffff; /* Subtle border for separation, adjust color as needed */
     cursor: pointer;
-    background-color: #FFCC99; /* Lighter shade of orange */
+    background-color: #FFCC99; /* Light orange for a playful look */
     transition: transform 0.2s, background-color 0.2s; /* Smooth transitions */
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 16px; /* Adjust for readability within squares */
+    font-size: 14px; /* Adjust based on the actual size of your grid items */
     font-weight: bold;
-    font-family: 'Comic Sans MS', 'Arial', sans-serif; /* Fun, kid-friendly font */
-    color: #333; /* Darker text for contrast */
+    color: #333;
 }
 
 .grid-item:hover {
     transform: scale(1.05); /* Subtle hover effect */
     background-color: #add8e6; /* Cool light blue for hover */
-    border-color: #add8e6; /* Match border color on hover */
+    border-color: #add8e6; /* Matching border color on hover */
 }
 
 .clicked {
     background-color: #1e90ff; /* Darker blue for clicked state */
-    border-color: #1e90ff; /* Match border color for clicked state */
+    border-color: #1e90ff; /* Matching border color for clicked state */
 }
 
 .disabled {
     background-color: #d3d3d3; /* Grey for disabled items */
-    border-color: #d3d3d3; /* Match border color for disabled state */
+    border-color: #d3d3d3; /* Matching border color for disabled state */
     pointer-events: none;
     opacity: 0.5;
 }
 
 #message {
-    font-size: 24px; /* Larger text for clear communication */
+    font-size: 24px; /* Clear communication */
     margin-bottom: 20px;
     color: #333;
     font-family: 'Comic Sans MS', 'Arial', sans-serif;

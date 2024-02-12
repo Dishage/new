@@ -23,7 +23,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 14px; /* Adjust based on the actual size of your grid items */
+    font-size: 17px; /* Adjust based on the actual size of your grid items */
     font-weight: bold;
     color: #333;
 }

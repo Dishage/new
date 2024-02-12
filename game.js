@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let lastNumber = null;
 
     function createGrid() {
-        for (let i = 2; i < 50; i += 2) {
+        for (let i = 1; i <= 100; i++) { // Changed from 2, i < 50, i += 2 to include 1 to 100
             const square = document.createElement('div');
             square.classList.add('grid-item');
             square.textContent = i;
@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function handleMove(square, number) {
+        // Allows the first move to be any number if lastNumber is null
         if (lastNumber === null || number % lastNumber === 0 || lastNumber % number === 0) {
             square.classList.add('disabled');
             lastNumber = number;
@@ -30,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function checkForEndGame() {
         const availableMoves = Array.from(document.querySelectorAll('.grid-item:not(.disabled)')).filter(square => {
             const num = parseInt(square.textContent);
-            return num % lastNumber === 0 || lastNumber % num === 0;
+            return lastNumber === null || num % lastNumber === 0 || lastNumber % num === 0;
         });
 
         if (availableMoves.length === 0) {
@@ -40,3 +41,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     createGrid();
 });
+

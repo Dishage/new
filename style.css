@@ -1,0 +1,22 @@
+#game-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); /* Adjust based on your preference */
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.grid-item {
+    padding: 20px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.disabled {
+    background-color: grey;
+    pointer-events: none;
+}

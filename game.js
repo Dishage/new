@@ -18,6 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Allows the first move to be any number if lastNumber is null
         if (lastNumber === null || number % lastNumber === 0 || lastNumber % number === 0) {
             square.classList.add('disabled');
+			// Inside handleMove function, add a class to clicked items
+			square.classList.add('clicked');
+
             lastNumber = number;
             currentPlayer = currentPlayer === 1 ? 2 : 1;
             message.textContent = `Player ${currentPlayer}'s turn`;

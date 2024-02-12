@@ -5,18 +5,37 @@
 
 #grid {
     display: grid;
-    grid-template-columns: repeat(10, 1fr); /* Adjust based on your preference */
+    grid-template-columns: repeat(10, 1fr); /* Adjust for a 10x10 grid */
     gap: 5px;
     margin-top: 20px;
 }
 
 .grid-item {
-    padding: 20px;
-    border: 1px solid black;
+    padding: 15px;
+    border: 2px solid #000;
     cursor: pointer;
+    background-color: #f0f0f0; /* Light grey background */
+    transition: transform 0.2s; /* Smooth scaling effect */
+}
+
+.grid-item:hover {
+    transform: scale(1.1); /* Slightly enlarge items on hover */
+    background-color: #add8e6; /* Light blue on hover */
 }
 
 .disabled {
-    background-color: grey;
+    background-color: #d3d3d3; /* Grey out disabled items */
     pointer-events: none;
+    opacity: 0.5; /* Make disabled items half-transparent */
+}
+
+/* Add a class for when an item is clicked */
+.clicked {
+    background-color: #90ee90; /* Light green for clicked items */
+}
+#message {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Comic Sans MS', 'Arial', sans-serif; /* Kid-friendly font */
 }

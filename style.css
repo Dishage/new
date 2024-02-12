@@ -5,43 +5,47 @@
 
 #grid {
     display: grid;
-    grid-template-columns: repeat(10, 1fr); /* 10x10 grid remains */
-    gap: 4px; /* Adjust the gap as necessary */
+    grid-template-columns: repeat(10, 1fr); /* 10x10 grid */
+    gap: 0px; /* Remove spaces between grid items */
     margin-top: 20px;
 }
 
 .grid-item {
-    height: 50px; /* Specify height to create a square */
-    width: 50px; /* Specify width to match the height, creating a square shape */
-    border: 2px solid #000; /* Consider using lighter borders for a softer look */
+    height: 50px; /* Square dimensions */
+    width: 50px; /* Square dimensions */
+    border: 1px solid #ffffff; /* Light border for subtle separation */
     cursor: pointer;
-    background-color: #ffa500; /* Orange background for a vibrant look */
-    transition: transform 0.2s, background-color 0.2s; /* Smooth transitions for interactions */
+    background-color: #FFCC99; /* Lighter shade of orange */
+    transition: transform 0.2s, background-color 0.2s; /* Smooth transitions */
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 16px; /* Adjust font size as needed for readability */
+    font-size: 16px; /* Adjust for readability within squares */
     font-weight: bold;
-    font-family: 'Comic Sans MS', 'Arial', sans-serif; /* Child-friendly font */
+    font-family: 'Comic Sans MS', 'Arial', sans-serif; /* Fun, kid-friendly font */
+    color: #333; /* Darker text for contrast */
 }
 
 .grid-item:hover {
-    transform: scale(1.05); /* Subtle scale to indicate hover, adjusted for smaller size */
-    background-color: #add8e6; /* Light blue for hover */
+    transform: scale(1.05); /* Subtle hover effect */
+    background-color: #add8e6; /* Cool light blue for hover */
+    border-color: #add8e6; /* Match border color on hover */
 }
 
 .clicked {
-    background-color: #1e90ff; /* Darker blue for clicked items */
+    background-color: #1e90ff; /* Darker blue for clicked state */
+    border-color: #1e90ff; /* Match border color for clicked state */
 }
 
 .disabled {
-    background-color: #d3d3d3; /* Greyed out for disabled */
+    background-color: #d3d3d3; /* Grey for disabled items */
+    border-color: #d3d3d3; /* Match border color for disabled state */
     pointer-events: none;
     opacity: 0.5;
 }
 
 #message {
-    font-size: 24px; /* Larger text for visibility */
+    font-size: 24px; /* Larger text for clear communication */
     margin-bottom: 20px;
     color: #333;
     font-family: 'Comic Sans MS', 'Arial', sans-serif;

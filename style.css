@@ -5,37 +5,43 @@
 
 #grid {
     display: grid;
-    grid-template-columns: repeat(10, 1fr); /* Adjust for a 10x10 grid */
-    gap: 5px;
+    grid-template-columns: repeat(10, 1fr); /* Maintain a 10x10 grid */
+    gap: 4px; /* Reduce gap size if necessary */
     margin-top: 20px;
 }
 
 .grid-item {
-    padding: 15px;
+    padding: 10px; /* Reduce padding to decrease box size */
     border: 2px solid #000;
     cursor: pointer;
-    background-color: #f0f0f0; /* Light grey background */
-    transition: transform 0.2s; /* Smooth scaling effect */
+    background-color: #f0f0f0;
+    transition: transform 0.2s;
+    font-size: 20px; /* Increase font size for better visibility */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-family: 'Comic Sans MS', 'Arial', sans-serif; /* Ensuring readability for kids */
 }
 
 .grid-item:hover {
-    transform: scale(1.1); /* Slightly enlarge items on hover */
-    background-color: #add8e6; /* Light blue on hover */
+    transform: scale(1.1);
+    background-color: #add8e6;
 }
 
 .disabled {
-    background-color: #d3d3d3; /* Grey out disabled items */
+    background-color: #d3d3d3;
     pointer-events: none;
-    opacity: 0.5; /* Make disabled items half-transparent */
+    opacity: 0.5;
 }
 
-/* Add a class for when an item is clicked */
 .clicked {
-    background-color: #90ee90; /* Light green for clicked items */
+    background-color: #90ee90;
 }
+
 #message {
-    font-size: 20px;
+    font-size: 24px; /* Slightly larger messages */
     margin-bottom: 20px;
     color: #333;
-    font-family: 'Comic Sans MS', 'Arial', sans-serif; /* Kid-friendly font */
+    font-family: 'Comic Sans MS', 'Arial', sans-serif;
 }

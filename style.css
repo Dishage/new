@@ -6,41 +6,41 @@
 #grid {
     display: grid;
     grid-template-columns: repeat(10, 1fr); /* Maintain a 10x10 grid */
-    gap: 4px; /* Reduce gap size if necessary */
+    gap: 4px; /* Adjust the gap as needed */
     margin-top: 20px;
 }
 
 .grid-item {
-    padding: 10px; /* Reduce padding to decrease box size */
-    border: 2px solid #000;
+    padding: 10px; /* Adjust padding to fit your design */
+    border: 2px solid #000; /* Consider using lighter borders for a softer look */
     cursor: pointer;
-    background-color: #f0f0f0;
-    transition: transform 0.2s;
-    font-size: 20px; /* Increase font size for better visibility */
+    background-color: #ffa500; /* Default color to orange */
+    transition: transform 0.2s, background-color 0.2s; /* Smooth transition for hover and click */
+    font-size: 20px; /* Increased font size for readability */
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    font-family: 'Comic Sans MS', 'Arial', sans-serif; /* Ensuring readability for kids */
+    font-family: 'Comic Sans MS', 'Arial', sans-serif; /* Child-friendly font */
 }
 
 .grid-item:hover {
     transform: scale(1.1);
-    background-color: #add8e6;
+    background-color: #add8e6; /* Light blue for hover */
+}
+
+.clicked {
+    background-color: #1e90ff; /* Darker blue for clicked items */
 }
 
 .disabled {
-    background-color: #d3d3d3;
+    background-color: #d3d3d3; /* Greyed out for disabled */
     pointer-events: none;
     opacity: 0.5;
 }
 
-.clicked {
-    background-color: #90ee90;
-}
-
 #message {
-    font-size: 24px; /* Slightly larger messages */
+    font-size: 24px; /* Larger text for visibility */
     margin-bottom: 20px;
     color: #333;
     font-family: 'Comic Sans MS', 'Arial', sans-serif;
